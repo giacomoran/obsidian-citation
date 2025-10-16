@@ -1,5 +1,7 @@
 # PDF Citation Navigator
 
+> **⚠️ Warning:** This project is vibe coded and I haven't reviewed the code. Use at your own discretion.
+
 Adds a back button to PDFs that appears when you click on internal links (citations), allowing you to easily return to where you were reading.
 
 ## Installation
