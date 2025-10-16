@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
   "description": "Adds a back button to PDFs when you click on internal links (citations)",
-  "author": "Giacomo",
+  "author": "Giacomo Randazzo",
   "authorUrl": "https://giacomoran.com/",
   "fundingUrl": "",
   "isDesktopOnly": true
