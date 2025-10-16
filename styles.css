@@ -1,0 +1,68 @@
+.pdf-citation-back-button {
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-normal);
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.pdf-citation-back-button:hover {
+  background: var(--background-modifier-hover);
+}
+
+.pdf-citation-back-button:active {
+  background: var(--background-modifier-active);
+}
+
+.pdf-citation-hover-preview {
+  position: absolute;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  max-height: 200px;
+  overflow: auto;
+  z-index: 1001;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--text-normal);
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.pdf-citation-hover-preview::-webkit-scrollbar {
+  width: 4px;
+}
+
+.pdf-citation-hover-preview::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pdf-citation-hover-preview::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 2px;
+}
+
+.pdf-viewer a[href^="#"] {
+  position: relative;
+}
+
+.pdf-viewer a[href^="#"]:hover {
+  background: var(--text-highlight-bg);
+  border-radius: 2px;
+  transition: background 0.1s ease;
+}

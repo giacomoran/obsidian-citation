@@ -1,0 +1,11 @@
+{
+  "id": "obsidian-citation",
+  "name": "PDF Citation Back Button",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Adds a back button to PDFs when you click on internal links (citations)",
+  "author": "Giacomo",
+  "authorUrl": "https://giacomoran.com/",
+  "fundingUrl": "",
+  "isDesktopOnly": true
+}
