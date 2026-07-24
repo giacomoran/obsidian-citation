@@ -165,15 +165,23 @@ export default class PDFCitationNavigatorPlugin extends Plugin {
       return;
     }
 
-    this.registerDomEvent(container, "click", (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
+    // Record the origin during capture, before PDF.js handles the link and
+    // synchronously changes the viewer's scroll position.
+    this.registerDomEvent(
+      container,
+      "click",
+      (event: MouseEvent) => {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
 
-      if (this.isInternalLink(target)) {
-        this.saveCurrentPosition(filePath, container);
-        // Prevent the event from bubbling to avoid duplicate saves
-        event.stopPropagation();
-      }
-    });
+        if (this.isInternalLink(target)) {
+          this.saveCurrentPosition(filePath, container);
+        }
+      },
+      { capture: true }
+    );
 
     this.setupContainers.add(container);
   }
